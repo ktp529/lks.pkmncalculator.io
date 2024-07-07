@@ -1,0 +1,204 @@
+/* Reset styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Default theme */
+:root {
+    --header-bg: #ffcb05; /* Pikachu yellow */
+    --container-bg: #fff; /* White container background color */
+    --button-bg: #ff6666; /* Light coral pink */
+    --table-border-color: #ccc; /* Table border color */
+}
+
+body.dark-mode {
+    --header-bg: #2c3e50; /* Dark blue-gray for header background */
+    --container-bg: #2c3a4a; /* Slightly darker blue-gray for container background */
+    --button-bg: #2980b9; /* Dark blue for button background */
+    --text-color: #add8e6; /* Light text color */
+    --border-color: #2c3e50; /* Dark blue-gray for borders */
+    --shadow-color: rgba(0, 0, 0, 0.4); /* Slightly stronger shadow color */
+    --table-border-color: #415b76; /* Dark blue-gray for table borders */
+    background-color: #34495e; /* Dark blue-gray background color for dark mode */
+}
+
+
+/* Different background color for the header */
+/* Header styles */
+header {
+    background-color: var(--header-bg); /* Set header background color */
+    color: var(--text-color); /* Light text color */
+    text-align: center;
+    padding: 20px 0;
+    width: 100%; /* Ensure the header covers the entire width */
+    margin: 0; /* Remove any margins */
+}
+
+
+
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0e0e0; /* Set container background color */
+    color: #333; /* Dark text color */
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Header styles */
+header {
+position: relative;
+    background-color: var(--header-bg); /* Set header background color */
+    color: var(--text-color); /* Light text color */
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+
+/* Selector for the "Coverage" heading */
+h2 {
+    color: #add8e6; /* Change the color to red */
+}
+
+/* Container styles */
+.container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--container-bg); /* Set container background color */
+    /* border-radius: 10px; Remove border-radius for flat effect */
+    box-shadow: 0 0 20px var(--shadow-color); /* Dark shadow */
+    padding: 20px;
+}
+
+
+
+/* Types container styles */
+.types-container1,
+.types-container2,
+.types-container3
+{
+    text-align: center;
+    margin-bottom: -10px; /* Adjust this value to decrease the space */
+}
+
+
+
+.type-icon {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 25%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.type-icon:hover {
+    transform: scale(1.1); /* Grow on hover */
+}
+
+.selected {
+    transform: scale(1.2); /* Larger when selected */
+}
+
+/* Results styles */
+.results {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.results > div table {
+    width: 100%; /* Adjust the width as needed */
+    margin-bottom: 20px; /* Add some space between tables */
+    border-collapse: collapse; /* Collapse table borders */
+}
+
+.results > div:nth-child(2) {
+    margin-left: 5%; /* Adjust the margin-left as needed */
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    background-color: var(--container-bg); /* Set container background color */
+}
+
+th, td {
+    border: 1px solid var(--table-border-color); /* Set border color */
+    padding: 10px;
+    text-align: center;
+    color: var(--text-color); /* Light text color */
+}
+
+th {
+    background-color: var(--header-bg); /* Set header background color */
+}
+
+/* Button styles */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--button-bg); /* Set button background color */
+    color: #fff; /* Light text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none; /* Remove button outline */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #ff8080; /* Lighter red on hover */
+}
+
+button:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4); /* Add focus effect */
+}
+#toggle-theme {
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    transform: translateY(-50%);
+    right: 10px; /* Adjust the distance from the right */
+}
+
+
+
+
+/* Position and style the layout button */
+#layout-button {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    padding: 10px 20px;
+    background-color: var(--button-bg); /* Use the button background color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none; /* Remove button outline */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#layout-button:hover {
+    background-color: #ff8080; /* Lighter red on hover */
+}
+
+#layout-button:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4); /* Add focus effect */
+}
+
+/* Other existing styles */
